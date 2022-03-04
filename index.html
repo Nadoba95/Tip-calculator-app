@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main class="calculator">
+      <h1 class="calculator__title">SPLI</h1>
+      <h1 class="calculator__title">TTER</h1>
+      <div class="calculator__body">
+        <div class="body-row">
+          <div class="form">
+            <p class="form__label">Bill</p>
+            <input
+              type="text"
+              class="form__input form__input--bill"
+              placeholder="0"
+              value="0"
+            />
+            <img
+              src="./images/icon-dollar.svg"
+              alt="dollar"
+              class="form__icon form__icon--dollar"
+            />
+            <p class="form__label">Select Tip %</p>
+            <div class="buttons-container">
+              <button class="btn">5%</button>
+              <button class="btn">10%</button>
+              <button class="btn">15%</button>
+              <button class="btn">25%</button>
+              <button class="btn">50%</button>
+              <input
+                type="text"
+                class="form__input-custom"
+                placeholder="Custom"
+              />
+            </div>
+            <span class="form__label">Number of People</span>
+            <span class="error-label">Can't be zero</span>
+            <input
+              type="text"
+              class="form__input form__input--people"
+              placeholder="0"
+              value="0"
+            />
+            <img
+              src="./images/icon-person.svg"
+              alt="person"
+              class="form__icon form__icon--people"
+            />
+          </div>
+          <div class="output">
+            <div class="output__display">
+              <div class="display-row">
+                <div class="display-col">
+                  <p class="white-para">Tip Amount</p>
+                  <p class="green-para">/ person</p>
+                </div>
+                <p class="result result--tip-amount">$0.00</p>
+              </div>
+              <div class="display-row">
+                <div class="display-col">
+                  <p class="white-para">Total</p>
+                  <p class="green-para">/ person</p>
+                </div>
+                <p class="result result--total">$0.00</p>
+              </div>
+              <button class="btn-reset">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/dejannadoba95" target="_blank"
+        >Dejan Nadoba</a
+      >.
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
