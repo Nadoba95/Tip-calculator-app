@@ -101,7 +101,8 @@ body {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.active {
   background-color: var(--strong-cyan);
   color: var(--dark-cyan);
 }
@@ -119,10 +120,8 @@ body {
   cursor: pointer;
 }
 
-.form__input:hover,
 .form__input:active,
 .form__input:focus,
-.form__input-custom:hover,
 .form__input-custom:active,
 .form__input-custom:focus {
   border: solid;
@@ -147,11 +146,6 @@ body {
   float: right;
   color: rgb(255, 95, 95);
   display: none;
-}
-
-.border-active {
-  border: solid;
-  border-color: rgb(255, 121, 121);
 }
 
 .output {
@@ -208,6 +202,11 @@ body {
 
 .btn-reset:hover {
   opacity: 1;
+}
+
+.border-active {
+  border: solid;
+  border-color: rgb(255, 121, 121);
 }
 
 .attribution {

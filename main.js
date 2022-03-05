@@ -9,6 +9,12 @@ const totalEl = document.querySelector(".result--total");
 const btns = document.querySelectorAll(".btn");
 const btnReset = document.querySelector(".btn-reset");
 
+function resetButtons() {
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
+  }
+}
+
 function calculation(percent) {
   const bill = +billEl.value;
   const people = +peopleEl.value;
@@ -36,20 +42,30 @@ function reset(e) {
   customEl.value = "";
   tipAmountEl.innerHTML = "$0.00";
   totalEl.innerHTML = "$0.00";
+  peopleEl.classList.remove("border-active");
+  errorEl.style.display = "none";
+  resetButtons();
 }
 
-[...btns].forEach((btn) =>
+btns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     e.preventDefault();
     const percent = +btn.innerHTML.slice(0, -1);
+
+    resetButtons();
+    btn.classList.add("active");
+
     calculation(percent);
   })
 );
 
-customEl.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    calculation(this.value);
-  }
-});
+[customEl, peopleEl, billEl].forEach((input) =>
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      resetButtons();
+      calculation(customEl.value);
+    }
+  })
+);
 
 btnReset.addEventListener("click", reset);
