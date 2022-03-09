@@ -209,17 +209,6 @@ body {
   border-color: rgb(255, 121, 121);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-  text-decoration: none;
-}
-
 /* Media */
 
 @media (max-width: 768px) {
@@ -254,10 +243,6 @@ body {
 
   .buttons-container {
     padding-right: 0px;
-  }
-
-  .attribution {
-    padding-bottom: 20px;
   }
 }
 
