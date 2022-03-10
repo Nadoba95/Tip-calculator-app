@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Link](https://nadoba95.github.io/Tip-calculator-app/)
+- Live Site URL: [https://nadoba95.github.io/Tip-calculator-app/](https://nadoba95.github.io/Tip-calculator-app/)
 
 ### Built with
 
