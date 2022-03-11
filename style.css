@@ -73,6 +73,7 @@ body {
   font-size: var(--input-font-size);
   color: var(--darker-grayish-cyan);
   padding: 0 25px 0 50px;
+  outline: none;
   cursor: pointer;
 }
 
@@ -117,6 +118,7 @@ body {
   font-size: var(--input-font-size);
   text-align: center;
   font-family: "Space Mono", monospace;
+  outline: none;
   cursor: pointer;
 }
 
