@@ -25,10 +25,11 @@
           <div class="form">
             <p class="form__label">Bill</p>
             <input
-              type="text"
               class="form__input form__input--bill"
               placeholder="0"
-              value="0"
+              type="number"
+              min="0"
+              step="0.5"
             />
             <img
               src="./images/icon-dollar.svg"
@@ -43,18 +44,21 @@
               <button class="btn">25%</button>
               <button class="btn">50%</button>
               <input
-                type="text"
                 class="form__input-custom"
                 placeholder="Custom"
+                type="number"
+                min="0"
+                step="1"
               />
             </div>
             <span class="form__label">Number of People</span>
             <span class="error-label">Can't be zero</span>
             <input
-              type="text"
               class="form__input form__input--people"
               placeholder="0"
-              value="0"
+              type="number"
+              min="0"
+              step="1"
             />
             <img
               src="./images/icon-person.svg"

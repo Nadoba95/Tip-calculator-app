@@ -72,7 +72,7 @@ body {
   text-align: right;
   font-size: var(--input-font-size);
   color: var(--darker-grayish-cyan);
-  padding: 0 25px 0 50px;
+  padding: 0 5px 0 50px;
   outline: none;
   cursor: pointer;
 }
