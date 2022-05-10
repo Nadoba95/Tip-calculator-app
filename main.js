@@ -76,11 +76,12 @@ btns.forEach((btn) =>
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
       if (customEl.value === "") {
-        alert("Please enter your custom tip");
+        alert("Please enter your custom tip (positive numbers)");
+        customEl.value = "";
         return;
       }
-      resetButtons();
       calculation(customEl.value);
+      resetButtons();
     }
   })
 );
