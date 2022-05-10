@@ -16,8 +16,21 @@ function resetButtons() {
 }
 
 function calculation(percent) {
-  const bill = +billEl.value;
-  const people = +peopleEl.value;
+  let bill = billEl.value;
+  let people = peopleEl.value;
+
+  if (
+    bill.match(/[^0-9.]/g) ||
+    people.match(/[^0-9.]/g) ||
+    percent.match(/[^0-9.]/g)
+  ) {
+    alert("Input's must be positive numbers!");
+    return;
+  }
+
+  bill = +bill;
+  people = +people;
+  percent = +percent;
 
   if (people <= 0) {
     peopleEl.classList.add("border-active");
@@ -37,8 +50,8 @@ function calculation(percent) {
 
 function reset(e) {
   e.preventDefault();
-  billEl.value = "0";
-  peopleEl.value = "0";
+  billEl.value = "";
+  peopleEl.value = "";
   customEl.value = "";
   tipAmountEl.innerHTML = "$0.00";
   totalEl.innerHTML = "$0.00";
@@ -50,11 +63,11 @@ function reset(e) {
 btns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     e.preventDefault();
-    const percent = +btn.innerHTML.slice(0, -1);
+    const percent = btn.innerHTML.slice(0, -1);
 
     resetButtons();
+    customEl.value = "";
     btn.classList.add("active");
-
     calculation(percent);
   })
 );
@@ -62,6 +75,10 @@ btns.forEach((btn) =>
 [customEl, peopleEl, billEl].forEach((input) =>
   input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
+      if (customEl.value === "") {
+        alert("Please enter your custom tip");
+        return;
+      }
       resetButtons();
       calculation(customEl.value);
     }
